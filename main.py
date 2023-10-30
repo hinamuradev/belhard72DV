@@ -1,3 +1,7 @@
 print("Hello World!")
 name = input("Input name:")
 print(name)
+print("Hello World!")
+print("Hello World!")
+print("Hello World!")
+print("Hello World!")
