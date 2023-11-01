@@ -2,8 +2,8 @@
 # 1 Способ
 text = input()
 word = text.split()
-text1 = '-'.join(word)
-print(text1)
+textlist = '-'.join(word)
+print(textlist)
 # 2 способ
 name = input()
 wordout = name.replace(' ', '-')
