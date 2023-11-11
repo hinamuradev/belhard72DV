@@ -2,5 +2,5 @@
 # а значениями вложенный словарь с ключами "name" и "email",
 # а значения для этих ключей будут браться с клавиатуры
 n = int(input("Введите число: "))
-my_dict = {n :{"name": input("Name"), "email": input("Email") } for n in range(1, n+1)}
+my_dict = {n: {"name": input("Name"), "email": input("Email")} for n in range(1, n+1)}
 print(my_dict)
