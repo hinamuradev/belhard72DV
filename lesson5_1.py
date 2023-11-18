@@ -3,9 +3,10 @@ n = int(input())
 m = int(input())
 k = int(input())
 
-while k > 0:
-    if n % m == 0:
+while True:
+    if n % m == 0 and n > k:
         print(f"Числа {n} кратные числу {m} и больше {k}")
         break
     else:
         print("loh")
+        break
