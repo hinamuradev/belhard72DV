@@ -2,13 +2,13 @@
 # словарь с данными о пользователе (имя, фамилия, телефон, почта), вывести
 # имена тех, у кого не указана почта (нет ключа email или значение этого ключа -пустая строка)
 def find_users_without_email(user_data):
-    users_without_email = []
+    users_email = []
 
     for user_id, user_info in user_data.items():
         if 'email' not in user_info or user_info['email'] == '':
-            users_without_email.append(user_info.get('имя', 'Неизвестно'))
+            users_email.append(user_info.get('имя', 'Неизвестно'))
 
-    return users_without_email
+    return users_email
 
 users_data = {
     1: {'имя': 'Иван', 'фамилия': 'Иванов', 'телефон': '123-456-789', 'email': 'ivan@example.com'},
@@ -17,7 +17,7 @@ users_data = {
     4: {'имя': 'Анна', 'фамилия': 'Кузнецова', 'телефон': '777-888-999', 'email': ''}
 }
 
-users_without_email = find_users_without_email(users_data)
+users_emails = find_users_without_email(users_data)
 print("Пользователи без указанной почты:")
-for user_name in users_without_email:
+for user_name in users_emails:
     print(user_name)
