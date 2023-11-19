@@ -6,8 +6,18 @@ def find_country_by_city(city, countries_data):
             return country
     return "Город не найден"
 
-world_cities = {
+# Пример использования:
+countries_and_cities = {
     "Россия": ["Москва", "Санкт-Петербург", "Новосибирск"],
-    "США": ["Нью-Йоркя", "Лос-Анджелес", "Чикаго"],
-    "Беларусь": ["Минск", "Брест", "Витебск"]
+    "США": ["Нью-Йорк", "Лос-Анджелес", "Чикаго"],
+    "Франция": ["Париж", "Марсель", "Лион"],
+    "Италия": ["Рим", "Милан", "Неаполь"]
 }
+
+city_to_find = "Милан"
+found_country = find_country_by_city(city_to_find, countries_and_cities)
+
+if found_country != "Город не найден":
+    print(f"Город {city_to_find} находится в стране {found_country}.")
+else:
+    print(f"Город {city_to_find} не найден в списке стран.")
