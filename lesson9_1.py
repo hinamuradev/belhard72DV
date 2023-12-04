@@ -1,8 +1,8 @@
-input_filename = 'ваш_исходный_файл.txt'
+input_filename = 'text.txt'
 with open(input_filename, 'r', encoding='utf-8') as file:
     lines = file.readlines()
 
-output_filename = 'результат.txt'
+output_filename = 'result.txt'
 with open(output_filename, 'w', encoding='utf-8') as output_file:
     for i, line in enumerate(lines, 1):
         line = line.rstrip('\n')
