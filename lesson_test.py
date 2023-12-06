@@ -1,19 +1,13 @@
-# Вывести первые N чисел кратные M и больше K
-n = int(input())
-m = int(input())
-k = int(input())
+import requests
+from bs4 import BeautifulSoup as bs
+import pandas as pd
 
-while k > 0:
-    if n % m == 0:
-        print(f"Числа {n} кратные числу {m} и больше {k}")
-        break
-    else:
-        print("loh")
+URL_TEMPLATE = 'https://rabota.by/vacancies/programmist_python/bez_opyta_raboty'
+FILE_NAME = 'vacancy.csv'
 
-# **Вывести четные числа от 2 до N по 5 в строку
-n = int(input("Введите N: "))
-num = []
-for n in range(2, n+1):
-    if n % 2 == 0:
-        num.append(n)
-print(num)
+r = requests.get(URL_TEMPLATE, headers={'User-Agent': 'Custom'})
+text = r.text
+soup = bs(text, 'html.parser')
+page = soup.find('h3', class_='bloko-header-section-3')
+print(r.status_code)
+print(page)
