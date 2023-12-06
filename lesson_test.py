@@ -1,10 +1,19 @@
-input_filename = 'text.txt'
-with open(input_filename, 'r', encoding='utf-8') as file:
-    lines = file.readlines()
+# Вывести первые N чисел кратные M и больше K
+n = int(input())
+m = int(input())
+k = int(input())
 
-output_filename = 'результат.txt'
-with open(output_filename, 'w', encoding='utf-8') as output_file:
-    for i, line in enumerate(lines, 1):
-        line = line.rstrip('\n')
-        letter_count = sum(c.isalpha() for c in line)
-        output_file.write(f"{i} строка - {letter_count} букв\n")
+while k > 0:
+    if n % m == 0:
+        print(f"Числа {n} кратные числу {m} и больше {k}")
+        break
+    else:
+        print("loh")
+
+# **Вывести четные числа от 2 до N по 5 в строку
+n = int(input("Введите N: "))
+num = []
+for n in range(2, n+1):
+    if n % 2 == 0:
+        num.append(n)
+print(num)
